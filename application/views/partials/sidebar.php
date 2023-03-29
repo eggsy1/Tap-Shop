@@ -4,8 +4,8 @@
 
 		<!-- User -->
 		<div class="user-box">
-			<div class="user-img">
-				<img src="<?= base_url('Dark') ?>/assets/images/users/download.png" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
+			<div class="topbar-left">
+				<a href="index.html" class="logo"><span>Tap<span>Shop</span></span><i class="zmdi zmdi-layers"></i></a>
 			</div>
 			<h5><a href="#"><?= $this->session->login['nama'] ?></a> </h5>
 			<ul class="list-inline">
@@ -67,7 +67,7 @@
 					<hr class="sidebar-divider d-none d-md-block">
 				<?php endif; ?>
 
-				<li class="has_sub">
+				<!-- <li class="has_sub">
 					<a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
 					<ul class="list-unstyled">
 						<li><a href="tables-basic.html">Basic Tables</a></li>
@@ -75,7 +75,7 @@
 						<li><a href="tables-responsive.html">Responsive Table</a></li>
 						<li><a href="tables-editable.html">Editable Table</a></li>
 					</ul>
-				</li>
+				</li> -->
 
 			</ul>
 			<div class="clearfix"></div>
