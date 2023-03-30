@@ -54,7 +54,7 @@
 											<td>Kode Barang</td>
 											<td>Nama Barang</td>
 											<td>Nama Supplier</td>
-											<td>Harga Jual</td>
+											<td>Harga</td>
 											<td>Stok</td>
 											<?php if ($this->session->login['role'] == 'admin') : ?>
 												<td>Aksi</td>
@@ -65,8 +65,12 @@
 										<?php foreach ($all_barang as $barang) : ?>
 											<tr>
 												<td><?= $no++ ?></td>
-												<td><?= $barang->kode_barang ?>
-													<a href="<?= base_url('barang/barcode_qrcode/' . $barang->kode_barang) ?>" class="btn btn-dark btn-sm"><i class="fa fa-barcode"></i></a>
+												<td><?php
+													$generator = new Picqer\Barcode\BarcodeGeneratorHTML();
+													echo $generator->getBarcode($barang->kode_barang, $generator::TYPE_CODE_128);
+													?>
+													<?= $barang->kode_barang ?>
+
 												</td>
 												<td><?= $barang->nama_barang ?></td>
 												<td><?= $barang->nama_supplier ?></td>
@@ -76,6 +80,7 @@
 													<td>
 														<a href="<?= base_url('barang/ubah/' . $barang->kode_barang) ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
 														<a onclick="return confirm('apakah anda yakin?')" href="<?= base_url('barang/hapus/' . $barang->kode_barang) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+														<a href="<?= base_url('barang/barcode_qrcode/' . $barang->kode_barang) ?>" class="btn btn-dark btn-sm"><i class="fa fa-barcode"></i></a>
 													</td>
 												<?php endif ?>
 											</tr>

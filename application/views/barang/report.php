@@ -22,8 +22,8 @@
 					<td>No</td>
 					<td>Kode Barang</td>
 					<td>Nama Barang</td>
-					<td>Harga Beli</td>
-					<td>Harga Jual</td>
+					<td>Nama Supplier</td>
+					<td>Harga</td>
 					<td>Stok</td>
 				</tr>
 			</thead>

@@ -43,7 +43,7 @@
                             <div class="box-body">
                                 <?php
                                 $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
-                                echo $generator->getBarcode($barang->nama_barang, $generator::TYPE_CODE_128);
+                                echo $generator->getBarcode($barang->kode_barang, $generator::TYPE_CODE_128);
                                 ?>
                                 <?= $barang->nama_barang ?>
                             </div>

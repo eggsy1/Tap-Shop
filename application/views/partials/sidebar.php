@@ -27,19 +27,21 @@
 				<li class="text-muted menu-title">Navigation</li>
 
 				<li>
-					<a href="<?= base_url('dashboard') ?>" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
+					<a href="<?= base_url('dashboard') ?>" class="waves-effect">
+						<i class="zmdi zmdi-view-dashboard"></i>
+						<span>Dashboard</span> </a>
 				</li>
 
 				<li class="nav-item <?= $aktif == 'barang' ? 'active' : '' ?>">
 					<a class="nav-link" href="<?= base_url('barang') ?>">
 						<i class="fas fa-fw fa-box"></i>
-						<span>Master Barang</span></a>
+						<span>Data Barang</span></a>
 				</li>
 
 				<li class="nav-item <?= $aktif == 'kasir' ? 'active' : '' ?>">
 					<a class="nav-link" href="<?= base_url('kasir') ?>">
 						<i class="fas fa-fw fa-cash-register"></i>
-						<span>Master Kasir</span></a>
+						<span>Data Kasir</span></a>
 				</li>
 
 				<li class="nav-item <?= $aktif == 'penjualan' ? 'active' : '' ?>">
@@ -50,32 +52,29 @@
 
 				<?php if ($this->session->login['role'] == 'admin') : ?>
 
-					<li class="text-muted menu-title">Pengaturan</li>
+					<li class="text-muted menu-title">More For Admin</li>
 
-					<li class="nav-item <?= $aktif == 'pengguna' ? 'active' : '' ?>">
-						<a class="nav-link" href="<?= base_url('pengguna') ?>">
-							<i class="fas fa-fw fa-users"></i>
-							<span>Manajemen Pengguna</span></a>
-					</li>
+					<li class="has_sub">
+						<a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> Admin </span> <span class="menu-arrow"></span></a>
+						<ul class="list-unstyled">
+							<li class="nav-item <?= $aktif == 'pengguna' ? 'active' : '' ?>">
+								<a class="nav-link" href="<?= base_url('pengguna') ?>">
+									<i class="fas fa-fw fa-users"></i>
+									<span>Manajemen Pengguna</span></a>
+							</li>
 
-					<li class="nav-item <?= $aktif == 'toko' ? 'active' : '' ?>">
-						<a class="nav-link" href="<?= base_url('toko') ?>">
-							<i class="fas fa-fw fa-building"></i>
-							<span>Profil Toko</span></a>
+							<li class="nav-item <?= $aktif == 'toko' ? 'active' : '' ?>">
+								<a class="nav-link" href="<?= base_url('toko') ?>">
+									<i class="fas fa-fw fa-building"></i>
+									<span>Profil Toko</span></a>
+							</li>
+						</ul>
 					</li>
 					<!-- Divider -->
 					<hr class="sidebar-divider d-none d-md-block">
 				<?php endif; ?>
 
-				<!-- <li class="has_sub">
-					<a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-					<ul class="list-unstyled">
-						<li><a href="tables-basic.html">Basic Tables</a></li>
-						<li><a href="tables-datatable.html">Data Table</a></li>
-						<li><a href="tables-responsive.html">Responsive Table</a></li>
-						<li><a href="tables-editable.html">Editable Table</a></li>
-					</ul>
-				</li> -->
+
 
 			</ul>
 			<div class="clearfix"></div>
